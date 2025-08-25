@@ -5,7 +5,7 @@ This is my first repository! I'm starting my 30-day challenge today.
 # Day 1: Data Wrangling Mastery
 
 ## Dataset
-[Name of your dataset, e.g., Titanic: Machine Learning from Disaster]
+googleplaystore.csv
 
 ## Objectives
 1.  Load and inspect the raw data.
