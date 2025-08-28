@@ -1,176 +1,136 @@
 # 30 Days of AI Engineering & Data Science
 
-This is my first repository! I'm starting my 30-day challenge today.
+A comprehensive 30-day journey mastering AI Engineering (GenAI/LLMs) and Data Science through hands-on projects.
 
-# Day 1: Data Wrangling Mastery
+## Overview
 
-## Dataset
-googleplaystore.csv
+This repository documents my intensive 30-day challenge to build and polish skills in:
+- **Data Science**: Data wrangling, visualization, classical ML
+- **AI Engineering**: Deep Learning, LLMs, RAG systems, fine-tuning
+- **MLOps**: Model deployment, APIs, productionization
 
-## Objectives
-1.  Load and inspect the raw data.
-2.  Handle missing values.
-3.  Correct data types.
-4.  Perform basic feature engineering.
+## Daily Progress
 
-## Steps Taken
-1.  **Missing Values:** Filled missing 'Age' values with the median age. Filled missing 'Cabin' values with 'Unknown'.
-2.  **Data Types:** Converted 'Sex' to a categorical data type.
-3.  **New Features:** Created a 'FamilySize' feature by combining 'SibSp' and 'Parch'.
+### Week 1: Foundation & Classical ML
+- **Day 1**: Data Wrangling Mastery - Cleaning Google Play Store data
+- **Day 2**: Data Visualization - Exploratory analysis and storytelling
+- **Day 3**: Regression - Predicting app ratings
+- **Day 4**: Classification - Predicting free vs paid apps
+- **Day 5**: ML Engineering - Building FastAPI model service with web interface
+- **Day 6**: SQL Deep Dive - Advanced analysis of app data
+- **Day 7**: Review & Portfolio Building (Current)
 
-## Key Learnings
-- The `df.isnull().sum()` command is essential for a quick missing data overview.
-- Using `inplace=True` saves time by modifying the DataFrame directly.
+### Week 2: Deep Learning Fundamentals (Upcoming)
+- Neural Networks, PyTorch, Transformers, Hugging Face
 
-# Day 2: Data Visualization & Storytelling
+### Week 3: Advanced AI Projects (Upcoming)  
+- RAG systems, Fine-tuning, Domain-specific chatbots
 
-## Objectives
-Use visualizations to explore the cleaned dataset from Day 1 and uncover key stories.
+### Week 4: Production & Deployment (Upcoming)
+- MLOps, Cloud deployment, Full-stack applications
 
-## Key Visualizations Created
-1.  **Distribution of App Rating**    
-2.  **App Categories**     
-3.  **Rating vs. Review**     
-4.  **Free vs. Paid** 
-5. **Content Rating**
-6. **Comparison Original vs. Normalized**
-    
-# Day 3: Regression - Predicting App Ratings
+## Featured Projects
 
-## Objective
-To predict an app's continuous `Rating` based on features like Reviews, Size, Installs, etc.
+### 1. App Type Prediction API
+**Technologies**: Python, FastAPI, Scikit-learn, Bootstrap
+- Built ML model to predict app pricing type (Free/Paid)
+- Created production-ready API with automatic documentation
+- Designed responsive web interface for predictions
+- **Live Demo**: [Localhost API](http://127.0.0.1:8000)
 
-## Steps Taken
-1.  **Data Preparation:** Selected features ('Reviews', 'Size', 'Installs', 'Price', 'Rating_normalized', 'Category_Encoded'). Separated the target variable (`Rating`).
-2.  **Train-Test Split:** Split the data into 70% training and 30% testing sets.
-3.  **Model Training:** Trained two models:
-    - Linear Regression
-    - Random Forest Regressor
-4.  **Evaluation:** Evaluated models using MAE, RMSE, and R2 Score.
+### 2. Google Play Store Analysis
+**Technologies**: Pandas, SQL, Matplotlib, Seaborn
+- Cleaned and analyzed 10,000+ app dataset
+- Created comprehensive visualizations and insights
+- Performed advanced SQL analysis for business insights
 
-## Results
-- **Best Model:** Linear Regression
-- **R2 Score:** 1.0
-- **RMSE:** 7.4344564992232e-15
-This means our model explains about 100% of the variance in app ratings.
+### 3. Data Engineering Pipeline
+**Technologies**: SQLite, Python, Data Wrangling
+- Built complete data processing pipeline from raw data to insights
+- Implemented robust data cleaning and validation
+- Created reproducible analysis workflows
 
-## Key Insight
-The most important feature for predicting an app's rating was `Rating_normalized`, followed by `Category_Encoded`.
+## Technical Skills
 
-# Day 4: Classification - Predicting App Type (Free vs. Paid)
+### Data Science
+- **Data Wrangling**: Pandas, NumPy, Data cleaning, Feature engineering
+- **Visualization**: Matplotlib, Seaborn, Storytelling with data
+- **Machine Learning**: Scikit-learn, Regression, Classification, Evaluation metrics
+- **SQL**: Advanced queries, Window functions, CTEs, Performance optimization
 
-## Objective
-To predict the category (`Type`) of an app based on its other features.
+### AI Engineering  
+- **Web Frameworks**: FastAPI, RESTful APIs, Automatic documentation
+- **Frontend**: HTML/CSS, JavaScript, Bootstrap, Responsive design
+- **MLOps**: Model serialization, API development, Error handling
 
-## Steps Taken
-1.  **Data Preparation:** Encoded the target variable (`Type` -> 0/1). Used One-Hot Encoding for categorical features and StandardScaler for numerical features.
-2.  **Train-Test Split:** Split the data into 70% training and 30% testing sets, using stratification.
-3.  **Model Training:** Trained two models:
-    - Logistic Regression
-    - Random Forest Classifier
-4.  **Evaluation:** Evaluated models using Accuracy, Confusion Matrix, and Precision/Recall metrics.
+### Tools & Platforms
+- **Version Control**: Git, GitHub
+- **Development**: Python, Jupyter Notebooks, VS Code
+- **Database**: SQLite, Database design
 
-## Results
-- **Best Model:** Random Forest Classifier
-- **Accuracy:** 100%
-- **Key Metric - Precision:** 1.00.
-- **Key Metric - Recall:** 1.00.
+## Key Achievements
 
-## Key Insight
-The most important feature for predicting if an app is paid was `Price`, which makes sense. The second most important was `installs`
+- Built 5+ complete end-to-end projects in 7 days
+- Mastered data cleaning with real-world messy data
+- Created production-ready ML API with web interface
+- Performed advanced SQL analysis on complex datasets
+- Developed strong documentation and reproducibility practices
 
-# Day 5: ML Engineering - Model API with FastAPI
+## Learning Outcomes
 
-## Objective
-Create a web API and beautiful frontend interface to serve a machine learning model that predicts whether a Google Play Store app is Free or Paid.
+### Technical Skills
+- End-to-end data science project execution
+- Production ML model deployment
+- Advanced SQL for data analysis
+- API development and web integration
 
-## What Was Built
-- FastAPI Backend: RESTful API with prediction endpoints
-- Beautiful Frontend: Modern HTML/CSS/JS interface with Bootstrap
-- Interactive Features: Real-time predictions with loading states and animations
-- Production-Ready: Error handling, input validation, and proper API design
+### Professional Skills
+- Project documentation and presentation
+- Problem-solving with real-world data challenges
+- Time management and consistent learning habits
+- Portfolio development and showcase creation
 
-## How to Run
-1. Ensure all dependencies are installed: `pip install -r requirements.txt`
-2. Run the server: `uvicorn main:app --reload`
-3. Web Interface `http://127.0.0.1:8000` 
+## Repository Structure
 
-## Make a Prediction
-1. Open the web interface
-2. Fill in the app features:
-    - Reviews (e.g., 1000000)
-    - Size in MB (e.g., 25.0)
-    - Installs (e.g., 10000000)
-    - Price in $ (e.g., 0.99)
-    - Days since update (e.g., 30)
-    - Rating (0-5 scale, e.g., 4.5)
-    - Normalized Rating (0-1 scale, e.g., 0.9)
-3. Click "Predict App Type"
-4. View the results with confidence indicators
-
-## API Endpoints
-- `GET /` - Web interface
-- `POST /predict` - Prediction endpoint
-- `GET /health` - Health check
-- `GET /model-info` - Model information
-- `POST /debug-predict` - Debug endpoint to validate input data
-- `GET /docs` - Automatic API documentation
-
-## Project Structure
 ```
-Day5_Model_API/
-├── main.py              # FastAPI application
-├── requirements.txt     # Dependencies
-├── templates/
-│   └── index.html      # Web interface
-└── static/             # Static files (CSS, JS, images)
+30DaysOfAIDS/
+│
+├── Day1_DataWrangling/          # Data cleaning & preprocessing
+├── Day2_Visualization/          # EDA & storytelling
+├── Day3_Regression/             # Rating prediction model
+├── Day4_Classification/         # App type classification  
+├── Day5_Model_API/              # FastAPI deployment
+├── Day6_SQL_Dive/               # Advanced SQL analysis
+├── Day7_Review_Portfolio/       # Documentation & review
+└── README.md                    # This file
 ```
 
-# Day 6: SQL Deep Dive - Analyzing App Data
+## How to Run Projects
 
-## Objective
-Practice advanced SQL techniques by analyzing the Google Play Store dataset.
+Each day has specific instructions. Generally:
 
-## What Was Covered
-- **Database Creation**: Converted pandas DataFrame to SQLite database
-- **Basic SQL**: Aggregations, GROUP BY, ORDER BY
-- **Advanced SQL**: Window functions, CTEs, conditional logic
-- **Complex Queries**: Multiple joins, subqueries, advanced filtering
-- **Data Visualization**: Creating plots from SQL results
+1. Navigate to the day's folder
+2. Check the README for dependencies
+3. Run the main Python scripts or Jupyter notebooks
+4. Explore the results and documentation
 
-## Key SQL Concepts Practiced
-1. **Aggregate Functions**: COUNT, SUM, AVG, MIN, MAX
-2. **Window Functions**: ROW_NUMBER, RANK, running totals
-3. **CTEs (Common Table Expressions)**: WITH clauses
-4. **CASE Statements**: Conditional logic in SQL
-5. **Advanced Joins**: Complex relationship analysis
+## Next Steps
 
-## Files Created
-- `create_sql_database.py`: Creates SQLite database from cleaned google playstore data
-- `sql_queries.py`: Basic to intermediate SQL practice problems
-- `advanced_sql_challenges.py`: Complex SQL challenges
-- `sql_visualization.py`: Visualizations from SQL results
-- `google_play_store.db`: SQLite database file
+- Week 2: Deep Learning with PyTorch and Transformers
+- Week 3: Building RAG systems and fine-tuning LLMs  
+- Week 4: MLOps and cloud deployment
 
-## Sample Insights Discovered
-- Top categories by number of apps
-- Average ratings by category
-- Free vs Paid app analysis
-- Correlation between reviews and ratings
-- Hidden gem apps with high ratings but low reviews
+## Blog Post
 
-## How to Run
-```bash
-# Run the scripts in order
-python create_sql_database.py
-python sql_queries.py
-python advanced_sql_challenges.py
-python sql_visualization.py
-```
+[Portfolio](./Day7_Review_Portfolio/blog_week1_review.md) about this 30-day challenge.
 
-## Skills Developed
-- SQL query optimization
-- Data analysis using SQL
-- Database management
-- Results interpretation
-- Data visualization from SQL results
+## Connect
+
+- **LinkedIn**: [Azfar Murtaza](https://www.linkedin.com/in/azfar-murtaza-0b2994303/)
+- **GitHub**: [azfar3](https://github.com/azfar3)
+- **Portfolio**: [Portfolio](./Day7_Review_Portfolio/portfolio.html)
+- **Email**: azfarmurtaza5@gmail.com
+
+---
+
+*This journey is documented day-by-day with complete code, explanations, and lessons learned.*

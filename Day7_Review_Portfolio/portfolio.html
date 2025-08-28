@@ -1,0 +1,167 @@
+<!-- portfolio.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Data Science Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .project-card {
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-badge {
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">30 Days of AI & Data Science</h1>
+            <p class="lead">A journey of building practical skills through hands-on projects</p>
+            <a href="https://github.com/yourusername/30DaysOfAIDS" class="btn btn-light btn-lg mt-3">View on GitHub</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Projects</h2>
+
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">App Prediction API</h5>
+                            <p class="card-text">ML model deployed as FastAPI service with web interface to predict app
+                                pricing type.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary skill-badge">FastAPI</span>
+                                <span class="badge bg-success skill-badge">Scikit-learn</span>
+                                <span class="badge bg-info skill-badge">Bootstrap</span>
+                            </div>
+                            <a href="../Day5_Model_API/" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Google Play Store Analysis</h5>
+                            <p class="card-text">Comprehensive data analysis of 10,000+ apps with SQL, visualization,
+                                and insights.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary skill-badge">SQL</span>
+                                <span class="badge bg-warning skill-badge">Pandas</span>
+                                <span class="badge bg-danger skill-badge">Matplotlib</span>
+                            </div>
+                            <a href="../Day6_SQL_Dive/" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <!-- Project 3 -->
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Wrangling Pipeline</h5>
+                            <p class="card-text">Complete data cleaning and preprocessing of messy real-world dataset.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-dark skill-badge">Data Cleaning</span>
+                                <span class="badge bg-success skill-badge">Pandas</span>
+                                <span class="badge bg-info skill-badge">NumPy</span>
+                            </div>
+                            <a href="../Day1_DataWrangling/" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">ML Classification</h5>
+                            <p class="card-text">Machine learning models for classification with comprehensive
+                                evaluation.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary skill-badge">Machine Learning</span>
+                                <span class="badge bg-success skill-badge">Classification</span>
+                                <span class="badge bg-warning skill-badge">Evaluation</span>
+                            </div>
+                            <a href="../Day4_Classification/" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Technical Skills</h2>
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <h4>Data Science</h4>
+                    <span class="badge bg-secondary">Pandas</span>
+                    <span class="badge bg-secondary">NumPy</span>
+                    <span class="badge bg-secondary">Matplotlib</span>
+                    <span class="badge bg-secondary">Seaborn</span>
+                    <span class="badge bg-secondary">Scikit-learn</span>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4>AI Engineering</h4>
+                    <span class="badge bg-primary">FastAPI</span>
+                    <span class="badge bg-primary">RESTful APIs</span>
+                    <span class="badge bg-primary">Web Development</span>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4>Database</h4>
+                    <span class="badge bg-success">SQL</span>
+                    <span class="badge bg-success">SQLite</span>
+                    <span class="badge bg-success">Window Functions</span>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h4>Tools</h4>
+                    <span class="badge bg-info">Git</span>
+                    <span class="badge bg-info">GitHub</span>
+                    <span class="badge bg-info">Jupyter</span>
+                    <span class="badge bg-info">VS Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 30 Days of AI & Data Science Journey</p>
+        <p>Connect with me:
+            <a href="https://linkedin.com/in/azfar-murtaza-0b2994307" class="text-white">LinkedIn</a> |
+            <a href="https://github.com/azfar3" class="text-white">GitHub</a>
+        </p>
+    </footer>
+</body>
+
+</html>
