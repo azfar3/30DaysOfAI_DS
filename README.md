@@ -126,7 +126,7 @@ Each day has specific instructions. Generally:
 
 ## Connect
 
-- **LinkedIn**: [Azfar Murtaza](https://www.linkedin.com/in/azfar-murtaza-0b2994303/)
+- **LinkedIn**: [Azfar Murtaza](https://www.linkedin.com/in/azfar-murtaza/)
 - **GitHub**: [azfar3](https://github.com/azfar3)
 - **Portfolio**: [Portfolio](./Day7_Review_Portfolio/portfolio.html)
 - **Email**: azfarmurtaza5@gmail.com
